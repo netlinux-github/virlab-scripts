@@ -67,6 +67,7 @@ build_vm() {
       qemu-img create -f raw "${vm_disk}" ${VM_DISK_SIZE}
     else
       echo "Cannot create file ${vm_disk} because it already exists."
+      exit 1
     fi
   else
     qemu-img create -f raw "${vm_disk}" ${VM_DISK_SIZE}
