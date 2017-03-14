@@ -1,0 +1,8 @@
+# -- list all domain virtual interfaces
+virsh domiflist <vm-name>
+
+# -- get network interfaces' addresses for a running domain
+virsh domifaddr <vm-name>
+
+# -- get statistics about domain virtual interfaces
+virsh domifstat <vm_name> <interface>
