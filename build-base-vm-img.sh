@@ -64,8 +64,10 @@ build_vm() {
     if [ "${remove}" == "y" ];then
       rm ${vm_disk}
       echo -e "OK. Removed ${vm_disk}"
+      qemu-img create -f raw "${vm_disk}" ${VM_DISK_SIZE}
+    else
+      echo "Cannot create file ${vm_disk} because it already exists."
     fi
-    qemu-img create -f raw "${vm_disk}" ${VM_DISK_SIZE}
   else
     qemu-img create -f raw "${vm_disk}" ${VM_DISK_SIZE}
   fi
