@@ -6,3 +6,9 @@ virsh domifaddr <vm-name>
 
 # -- get statistics about domain virtual interfaces
 virsh domifstat <vm_name> <interface>
+
+# -- get link state of a virtual interface
+virsh domif-getlink <vm_name> <interface>
+
+# -- set link state of a virtual interface
+virsh domif-setlink <vm_name> <interface> up|down
